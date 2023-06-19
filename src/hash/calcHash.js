@@ -1,17 +1,17 @@
-const crypto = require('crypto');
-const fs = require('fs');
+import { createHash } from 'crypto';
+import { readFileSync } from 'fs';
 
 const calculateHash = async () => {
     try {
-        const hash = crypto.createHash('sha256');
-        const data = fs.readFileSync('fileToCalculateHashFor.txt');
+        const hash = createHash('sha256');
+        const data = readFileSync('fileToCalculateHashFor.txt');
 
         hash.update(data);
         const digest = hash.digest('hex');
 
         console.log(digest);
     } catch (error) {
-        console.error('Error calculatinng hash:', error);
+        console.error('Error calculatinng hash',);
     }
 };
 
