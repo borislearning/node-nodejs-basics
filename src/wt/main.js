@@ -24,16 +24,13 @@ const performCalculations = async () => {
             });
 
             worker.on('error', (error) => {
-                console.error('An error occurred in the worker:', error);
                 results.push({ status: 'error', data: null });
                 reject(error);
             });
 
             worker.on('exit', (exitCode) => {
                 if (exitCode !== 0) {
-                    console.log(`Worker stopped with exit code ${exitCode}`);
                     results.push({ status: 'error', data: null });
-                    reject(new Error(`Worker stopped with exit code ${exitCode}`));
                 }
             });
         });
@@ -42,7 +39,7 @@ const performCalculations = async () => {
     }
 
     await Promise.all(workers);
-
+    results.sort((a, b) => a.id - b.id);
     console.log(results);
 };
 if (isMainThread) {
