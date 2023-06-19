@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const remove = async () => {
-    const filePath = path.join(__dirname, 'fileToRemove.txt');
+    const filePath = path.join(__dirname, files, 'fileToRemove.txt');
 
     try {
         await fs.access(filePath);

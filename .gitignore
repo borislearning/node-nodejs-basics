@@ -7,3 +7,5 @@ src/fs/files_copy/fileToRemove.txt
 src/fs/files_copy/fresh.txt
 src/fs/files_copy/hello.txt
 src/fs/files_copy/wrongFilename.txt
+src/fs/files/properFilename.md
+src/fs/files/wrongFilename.txt

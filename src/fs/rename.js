@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.join(dirname(__filename), "files/");
 
 const rename = async () => {
     const oldPath = path.join(__dirname, 'wrongFilename.txt');
