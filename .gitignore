@@ -13,3 +13,5 @@ src/fs/files/wrongFilename.txt
 src/streams/files/fileToWrite.txt
 src/fs/files/wrongFilename.txt
 src/streams/files/fileToWrite.txt
+archive.gz
+src/zip/files/fileToCompress.txt
